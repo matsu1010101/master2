@@ -243,7 +243,7 @@ const styles = {
   card: { width: '100%', maxWidth: '900px', backgroundColor: '#1a0505', border: '1px solid #3e1010', padding: '30px', borderRadius: '4px' },
   navHeader: { marginBottom: '25px' },
   backButton: { color: '#d4af37', textDecoration: 'none', border: '1px solid #d4af37', padding: '6px 15px', borderRadius: '2px', fontSize: '0.85rem' },
-  headerSection: { flexDirection: 'column', display: 'flex', gap: '25px', alignItems: 'center', marginBottom: '35px' },
+  headerSection: { flexDirection: 'column'as const, display: 'flex', gap: '25px', alignItems: 'center', marginBottom: '35px' },
   mainImage: { width: '80px', height: '80px', borderRadius: '50%', border: '3px solid #d4af37', objectFit: 'cover' as const },
   titleBox: { flex: 1 },
   idLabel: { color: '#888', fontSize: '0.8rem', fontFamily: 'monospace' },
