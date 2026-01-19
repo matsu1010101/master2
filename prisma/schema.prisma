@@ -10,8 +10,8 @@ datasource db {
 }
 
 model Menu {
-  id          String   @id @default(cuid())
-  nameJa      String
+  id        Int      @id @default(autoincrement())  // ← @default(autoincrement()) が必須！
+  name      String
   category    String
   price       Int      @default(0)
 }

@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     // データの保存
     const newMenu = await prisma.menu.create({
       data: {
-        nameJa: body.nameJa,       // DBのカラム名に合わせてください (例: nameJa ではなく name かも)
+        name: body.name,       // DBのカラム名に合わせてください (例: nameJa ではなく name かも)
         price: body.price,
         category: body.category || 'Other',
         // imageUrl: body.imageUrl, // 画像URL用（後で追加する場合）
