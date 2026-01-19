@@ -10,16 +10,8 @@ datasource db {
 }
 
 model Menu {
-  id          String   @id @default(cuid())
-  menuId      String   @unique
   nameJa      String
-  nameEn      String
-  nameZh      String
-  description String
-  image       String
   category    String
-  isVegan     Boolean  @default(false)
-  popularity  Int      @default(5)
   price       Int      @default(0)
-  allergy     String
+
 }
