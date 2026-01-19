@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 import { prisma } from '@/lib/prisma'; // さっき作った共通設定ファイルを読み込む
 
 export default function RegisterPage() {
@@ -20,8 +20,9 @@ export default function RegisterPage() {
         price
       },
     });
-
-    // 登録が終わったらトップページに戻る
+    // キャッシュを更新してトップページを最新にする
+    revalidatePath('/');
+    // 画面遷移
     redirect('/');
   }
 
@@ -55,9 +56,8 @@ export default function RegisterPage() {
           <span>ヴィーガン対応</span>
         </label>
 
-        <Link href="/" >
+
           <button type="submit" style={buttonStyle}>データベースへ登録する</button>
-        </Link>
       </form>
     </div>
   );
