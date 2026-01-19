@@ -2,6 +2,8 @@
 
 generator client {
   provider = "postgresql"
+  url      = env("postgres://466d37106badb60a4865f4c312050d5fbf96920279fd6af43fec8236b288040a:sk_Px1drZNHR7Hy9SDSmbQPO@db.prisma.io:5432/postgres?sslmode=require") // Vercelが用意する変数名に合わせる
+  directUrl = env("postgres://466d37106badb60a4865f4c312050d5fbf96920279fd6af43fec8236b288040a:sk_Px1drZNHR7Hy9SDSmbQPO@db.prisma.io:5432/postgres?sslmode=require") // これも追加
 }
 
 datasource db {
