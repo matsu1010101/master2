@@ -14,16 +14,9 @@ export default function RegisterPage() {
     // データベースの「Menu」テーブルに新しいデータを追加
     await prisma.menu.create({
       data: {
-        menuId: "M" + Math.floor(Math.random() * 10000), // ランダムな管理番号
         nameJa,
-        nameEn: nameJa + " (English)", // 簡易的に英語名を作成
-        nameZh: nameJa + " (Chinese)", // 簡易的に中国語名を作成
-        description: "データベースから登録されたメニューです。",
-        image: "/images/shoyu.jpg", // 仮の画像パス
         category,
-        isVegan,
-        price,
-        allergy: "wheat,soy", // 仮のアレルギー情報
+        price
       },
     });
 
