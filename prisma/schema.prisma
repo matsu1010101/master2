@@ -12,7 +12,7 @@ datasource db {
 model Menu {
   id          String   @id @default(cuid())
   menuId      String   @unique
-  name        String
+  nameJa      String
   nameEn      String
   nameZh      String
   description String
